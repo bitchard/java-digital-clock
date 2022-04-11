@@ -1,10 +1,7 @@
 //function to display the time on the page
 
 $(document).ready(function() {
-    function displayTime() {
 
-    }
-});
 
 //variable to store the current time
 function displayTime() {
@@ -15,5 +12,16 @@ function displayTime() {
     var minutes = currentTime.getMinutes();
     var secounds = currentTime.getSecounds();
 }
-//these steps will get computer to fill current time
+//This gets a handle to the clock div in out html
+var clockDiv = documet.getElementById('clock');
+{
 
+//Then we set the text inside the clock div
+//to the hours. minutes and secounds of the current time.
+clockDiv.innerText = hours + " : " + minutes + " : " + secounds;
+}
+
+//This runs the dispaly time function for the first time
+displayTime();
+
+});
